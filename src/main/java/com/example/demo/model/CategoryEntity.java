@@ -26,12 +26,17 @@ public class CategoryEntity {
 	 @GeneratedValue(strategy = GenerationType.AUTO)
 	 @Column(name = "CategoryID")
 	 private int categoryId;
-	 //TODO:need to done 
+	 @Column(name = "categoryName")
 	 private String categoryName;
+	 @Column(name = "IsActive")
 	 private boolean isActive;
+	 @Column(name = "CreatedOn")
 	 private Date createdOn;
+	 @Column(name = "UpdatedOn")
 	 private Date updatedOn;
+	 @Column(name = "CreatedBy")
 	 private String createdBy;
+	 @Column(name = "UpdatedBy")
 	 private String updatedBy;
 	 @OneToMany(mappedBy = "categoryEntity")
 	 @JsonManagedReference

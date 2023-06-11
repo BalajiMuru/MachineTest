@@ -5,6 +5,7 @@ import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,18 +23,31 @@ public class ProductEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int productId;
+	
     private int categoryId;
+	@Column(name = "Name")
     private String  name; 
+	@Column(name = "Description")
 	private String description; 
+	@Column(name = "Price")
 	private int price;
+	@Column(name = "ImagePath")
 	private String imagePath ;
+	@Column(name = "Soldout")
 	private boolean soldout ;
+	@Column(name = "Attribute1")
 	private String attribute1 ;
+	@Column(name = "Attribute2")
 	private String attribute2 ;
+	@Column(name = "IsActive")
 	private boolean isActive ;
+	@Column(name = "CreatedOn")
 	private Date createdOn ;
+	@Column(name = "UpdatedOn")
 	private Date updatedOn ;
+	@Column(name = "CreatedBy")
 	private String createdBy ;
+	@Column(name = "UpdatedBy")
 	private String updatedBy ;
 	
 	@ManyToOne
